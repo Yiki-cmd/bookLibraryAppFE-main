@@ -1,0 +1,144 @@
+/* style.css */
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* =====================================
+   Base Page Setup
+===================================== */
+body {
+  font-family: 'Roboto', sans-serif;    /* Sets global font to Roboto, with sans-serif fallback */
+  color: #fff;                          /* Sets global text color to white */
+  margin: 0;                            /* Removes default browser margin */
+  padding: 0;                           /* Removes default browser padding */
+  background-color: #1D1D1D;            /* Solid fallback background color (dark grey) */
+  background-image: var(--app-bg);      /* Applies gradient background via CSS variable (--app-bg) */
+  background-blend-mode: overlay;       /* Blends background gradient over fallback color */
+}
+
+/* =====================================
+   Layout Wrapper - Fluid Side-by-Side Containers
+===================================== */
+.wrapper {
+  
+  background: var(--app-container); 
+  display: flex;                        /* Enables flexbox layout for fluid positioning */
+  flex-wrap: wrap;                      /* Allows containers to wrap onto new lines when screen size reduces */
+  gap: 0.5rem;                          /* Sets spacing between child elements (containers) */
+  justify-content: center;              /* Horizontally centers containers within wrapper */
+  align-items: flex-start;              /* Aligns containers vertically to the top */
+  padding: 2rem;                        /* Adds padding around the entire wrapper */
+}
+
+/* =====================================
+   Container Box Styling
+===================================== */
+.container {
+        /* Sets background using CSS variable (--app-container), typically a gradient or styled bg */
+  padding: 2rem;                        /* Adds inner padding within container boxes */
+  border-radius: 12px;                  /* Adds rounded corners to container boxes (12px radius) */
+  flex: 1 1 320px;                      /* Enables containers to grow and shrink fluidly, with initial width set at 320px */ 
+}
+
+/* =====================================
+   Button Section Layout
+===================================== */
+.section {
+  display: flex;                        /* Enables flexbox layout for horizontal arrangement */
+  justify-content: center;              /* Horizontally centers buttons within the section */
+  gap: 0.5rem;                            /* Sets spacing between buttons */
+  flex-wrap: wrap;                      /* Allows buttons to wrap onto new lines on smaller screens */
+}
+
+.streched-container{
+  background: var(--app-container); 
+  display: flex;    
+  padding: 2rem;  
+}
+
+/* =====================================
+   Form Section Layout
+===================================== */
+.form-section {
+  display: flex;                        /* Enables flexbox layout */
+  flex-direction: column;               /* Stacks form elements vertically */
+  gap: 1rem;                            /* Sets spacing between form elements */
+  max-width: 400px;                     /* Limits form section width to 400px */
+  margin: auto;                         /* Horizontally centers form section within its parent */
+}
+
+/* =====================================
+   Headings Typography
+===================================== */
+h1, h2, h3, h4, h5, h6 {
+  text-align: center;                   /* Centers text horizontally for all headings */
+  font-family: 'Roboto', sans-serif;    /* Ensures headings use Roboto font with sans-serif fallback */ 
+}
+
+h1 {
+  font-size: 2.5rem;                    /* Sets font size of h1 heading to 2.5rem (~40px) */
+  font-weight: 700;                     /* Sets h1 font weight to bold */
+}
+
+h2 {
+  font-size: 2rem;                      /* Sets font size of h2 heading to 2rem (~32px) */
+  font-weight: 600;                     /* Sets h2 font weight to semi-bold */
+}
+
+h3 {
+  font-size: 1.75rem;                   /* Sets font size of h3 heading to 1.75rem (~28px) */
+  font-weight: 600;                     /* Sets h3 font weight to semi-bold */
+}
+
+h4 {
+  font-size: 1.5rem;                    /* Sets font size of h4 heading to 1.5rem (~24px) */
+  font-weight: 500;                     /* Sets h4 font weight to medium */
+}
+
+h5 {
+  font-size: 1.25rem;                   /* Sets font size of h5 heading to 1.25rem (~20px) */
+  font-weight: 500;                     /* Sets h5 font weight to medium */
+}
+
+h6 {
+  font-size: 1rem;                      /* Sets font size of h6 heading to 1rem (~16px) */
+  font-weight: 500;                     /* Sets h6 font weight to medium */
+}
+
+/* =====================================
+   backgrounds
+===================================== */
+.bg-primary {
+  background-color: var(--color-primary-bg); /* Sets background color to primary color */
+  color: var(--color-primary-text);           /* Sets text color to primary text color */
+}
+
+.bg-secondary {
+  background-color: var(--color-secondary-bg); /* Sets background color to secondary color */
+  color: var(--color-secondary-text);           /* Sets text color to secondary text color */
+}
+
+.bg-success {
+  background-color: var(--color-tertiary-bg); /* Sets background color to tertiary color */
+  color: var(--color-tertiary-text);           /* Sets text color to tertiary text color */
+}
+
+.bg-warning {
+  background-color: var(--color-warning-bg); /* Sets background color to warning color */
+  color: var(--color-warning-text);           /* Sets text color to warning text color */
+}
+.bg-error {
+  background-color: var(--color-error-bg); /* Sets background color to error color */
+  color: var(--color-error-text);           /* Sets text color to error text color */
+}
+ 
+ 
+hr {
+  border: 0; /* Remove default border */
+  height: 2px; /* Set the thickness of the line */
+  background: linear-gradient(to right, #333, #555, #333); /* Dark gradient effect */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5); /* Engraved shadow effect */
+  margin: 20px 0; /* Add spacing around the hr */
+}
